@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="body">
+    
+    <div class="TOP">
+    <div class="TOP-LEFT">
+        <a href="index.html">
+            <img class="LOGO" src="./images/QUEUEK_LOGO.png"> 
+        </a>
+    </div>
+
+    <div class="TOP-RIGHT">
+        <div class="dropdown">
+            <a class="WORKS dropbtn" href="#">WORKS</a>
+            <div class="dropdown-content">
+                <a class="DROP-TEXT" href="./LOGOFOLIO.html">Projects</a>
+                <a class="DROP-TEXT" href="./VIDEOS.html">Videos</a>
+            </div>
+        </div>
+
+        <a class="WORKS" href="./ART.html">ART</a>
+        <a class="WORKS" href="./ABOUT.html">ABOUT</a>
+        <a class="WORKS" href="./CONTACT.html">CONTACT</a>
+    </div>
+</div>
+
+
+<div class="ABOUT-PROJECT">
+<div class="CONTACT">
+
+  <div class="CONTACT-LEFT">
+    <p class="ABOUT-TITLE-TEXT">Contact</p>
+
+    <p class="ABOUT-TEXT">
+      Available for freelance work, collaborations, and design projects.
+    </p>
+
+    <div class="CONTACT-LINKS">
+      <a class="A-ABOUT" href="mailto:queuekdesignstudio@gmail.com">
+        queuekdesignstudio@gmail.com
+      </a>
+
+      <a class="A-ABOUT" href="https://instagram.com/queuekdesignstudio">
+        Instagram
+      </a>
+    </div>
+  </div>
+
+  <div class="CONTACT-RIGHT">
+<form class="CONTACT-FORM" action="https://formspree.io/f/xeenkejn" method="POST">
+
+  <label class="CONTACT-LABEL">Name</label>
+  <input type="text" name="name" required>
+
+  <label class="CONTACT-LABEL">Email</label>
+  <input type="email" name="email" required>
+
+  <label class="CONTACT-LABEL">Message</label>
+  <textarea name="message" rows="6" required></textarea>
+
+  <button class="CONTACT-BUTTON" type="submit">Send</button>
+
+<div class="CONTACT-SUCCESS" id="successMessage">
+  <p>Message Sent!</p>
+</div>
+
+  
+</form>
+
+
+
+</div>
+
+
+</body>
+</html>
+
+
+
+<script>
+const form = document.querySelector(".CONTACT-FORM");
+const success = document.getElementById("successMessage");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const data = new FormData(form);
+
+  await fetch(form.action, {
+    method: "POST",
+    body: data,
+    headers: { "Accept": "application/json" }
+  });
+
+  form.reset();
+
+  success.classList.add("show");
+});
+</script>
