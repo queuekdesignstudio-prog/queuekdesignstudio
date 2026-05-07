@@ -1195,3 +1195,44 @@ height: 40vh;
     height: auto;
     display: block;
 }
+
+
+
+.ARIS-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  margin: auto;
+}
+
+.ARIS-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.ARIS-track img {
+  border-radius: 22px;
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* buttons */
+.ARIS-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 28px;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.ARIS-prev { left: 10px; }
+.ARIS-next { right: 10px; }
