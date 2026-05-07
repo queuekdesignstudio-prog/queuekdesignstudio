@@ -786,6 +786,7 @@ height: 40vh;
 }
 
 .slides-D img{
+  border-radius: 22px;
   flex: 0 0 100%;
   width: 100%;
   height: 100%;
