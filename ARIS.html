@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aris FC</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="body">
+    <div class="TOP">
+        <div class="TOP-LEFT">
+            <a href="index.html">
+                <img class="LOGO" src="./images/QUEUEK_LOGO.png"> 
+            </a>
+        </div>
+        <div class="TOP-RIGHT">
+            <div class="dropdown">
+                <a class="WORKS dropbtn" href="#">WORKS</a>
+        <div class="dropdown-content">
+            <a class="DROP-TEXT" href="./LOGOFOLIO.html">Projects</a>
+            
+            <a class="DROP-TEXT" href="./VIDEOS.html">Videos</a>
+        </div>
+    </div>
+            <a class="WORKS" href="./ART.html">ART</a>
+            <a class="WORKS" href="./ABOUT.html">ABOUT</a>
+            <a class="WORKS" href="./CONTACT.html">CONTACT</a>
+        </div>
+    </div>
+
+<div class="PROJECT">
+        <div class="PROJECT-LEFT">
+            <p class="PROJECT-TITLE">Aris Voulas FC</p>
+            <p class="PROJECT-SUBTITLE">Freelance work</p>
+            <p class="PROJECT-TEXT">Design of promotional materials for Aris Voulas, a local football club, including posters, banners, and leaflets for its annual youth summer camp.</p>
+        </div>
+        <div class="DECON-PROJECT-RIGHT">
+
+<div class="ARIS-carousel">
+  <div class="ARIS-track">
+    <img src="./images/ARIS_1.png">
+    <img src="./images/ARIS_1-e.jpg">
+    <img src="./images/ARIS_1-d.png">
+  </div>
+
+  <button class="ARIS-btn ARIS-prev">‹</button>
+  <button class="ARIS-btn ARIS-next">›</button>
+</div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <div class="BOTTOM">
+        <div class="BOTTOM-LEFT">
+            © Queuek Design Studio, 2026, All rights reserved
+        </div>
+        <div class="BOTTOM-RIGHT">
+            <a href="https://www.instagram.com/queuekdesignstudio/" target="_blank">
+                Instagram
+            </a>
+            <a href="mailto:queuekdesignstudio@gmail.com">queuekdesignstudio@gmail.com</a>
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>
+
+
+<script>
+document.querySelectorAll(".ARIS-carousel").forEach((carousel) => {
+  const track = carousel.querySelector(".ARIS-track");
+  const slides = carousel.querySelectorAll("img");
+
+  let index = 0;
+
+  function update() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  carousel.querySelector(".ARIS-next").addEventListener("click", () => {
+    index = (index + 1) % slides.length;
+    update();
+  });
+
+  carousel.querySelector(".ARIS-prev").addEventListener("click", () => {
+    index = (index - 1 + slides.length) % slides.length;
+    update();
+  });
+});
+
+
+
+
+
+</script>
