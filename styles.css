@@ -994,6 +994,7 @@ height: 40vh;
 
 .ABOUT-SUBTITLE-TEXT-gr {
   font-family: "Google Sans";
+    color: antiquewhite;
   font-size: clamp(1rem, 1.5vw, 1.4rem);
   opacity: 0.8;
 }
