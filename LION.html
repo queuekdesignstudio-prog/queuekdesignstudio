@@ -49,14 +49,35 @@
 </video>
 </div>
 
-<script>
-  const video = document.getElementById('delayed-video');
-  const delay = 2000; // 3 seconds
+    <video
+        id="delayed-video"
+        width="600"
+        height="600"
+        muted
+        playsinline
+        preload="auto"
+        class="video-test-2">
+    </video>
 
-  setTimeout(() => {
-    video.play(); // starts the video after delay
-  }, delay);
+
+<script>
+    const video = document.getElementById("delayed-video");
+
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+    if (isSafari) {
+        video.src = "./images/LION.mov";
+    } else {
+        video.src = "./images/LION.webm";
+    }
+
+    setTimeout(() => {
+        video.play().catch(error => {
+            console.log("Video could not autoplay:", error);
+        });
+    }, 2000);
 </script>
+            
 
         </div>
     </div>
